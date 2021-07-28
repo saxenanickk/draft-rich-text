@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+### Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+install the package as per the description below
+`yarn add https://github.com/saxenanickk/draft-rich-text.git` or `npm i https://github.com/saxenanickk/draft-rich-text.git`
 
-## Available Scripts
+### Usage Example
 
-In the project directory, you can run:
+```
+import React, { Component } from "react";
+import {TextEditor} from "rich-text";
+class App extends Component {
+  render() {
+    return (
+      <TextEditor
+        linkUpload={false}
+        onSave={data => console.log("Data: ", data)}
+      />
+    );
+  }
+}
+```
 
-### `yarn start`
+### Usage Example
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+import React, { Component } from "react";
+import {RichText} from "rich-text";
 
-### `yarn test`
+const data = '{"blocks":[{"key":"pqa3","text":"1","type":"blockquote","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"87ajs","text":"2","type":"ordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+class App extends Component {
+  render() {
+    return (
+      <RichText initialData={data} />
+    )
+  }
+}
 
-### `yarn build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Props
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Prop                  | Type    | Default | Note                                               |
+| --------------------- | ------- | ------- | -------------------------------------------------- |
+| `width`               | Number  | 900px   | custom width provided to the text editor           |
+| `isSpellCheck`        | Boolean | false   | allows spell check in the editor                   |
+| `boldOption`          | Boolean | true    | either give this option to the user or not         |
+| `italicOption`        | Boolean | true    | either give this option to the user or not         |
+| `underlineOption`     | Boolean | true    | either give this option to the user or not         |
+| `headerOption`        | Boolean | true    | either give this option to the user or not         |
+| `codeOption`          | Boolean | true    | either give this option to the user or not         |
+| `quoteOption`         | Boolean | true    | either give this option to the user or not         |
+| `unorderedListOption` | Boolean | true    | either give this option to the user or not         |
+| `orderedListOption`   | Boolean | true    | either give this option to the user or not         |
+| `linkUpload`          | Boolean | true    | either give this option to the user or not         |
+| `imageUpload`         | Boolean | true    | either give this option to the user or not         |
+| `videoUpload`         | Boolean | true    | either give this option to the user or not         |
+| `audioUpload`         | Boolean | true    | either give this option to the user or not         |
+| `fileUpload`          | Boolean | true    | either give this option to the user or not         |
+| `onSave`              | String  |         | return a string can be used to store at the server |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
