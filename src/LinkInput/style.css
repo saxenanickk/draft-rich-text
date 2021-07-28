@@ -1,0 +1,83 @@
+.link-modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.link-area {
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  left: 10%;
+  background-color: #fff;
+  padding: 3%;
+}
+.link-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+.times-icon {
+  cursor: pointer;
+}
+.link-text {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+.display-text {
+  width: 50%;
+  margin-left: 3%;
+  height: 18px;
+}
+.link-action {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  height: 30px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.cancel-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.5);
+  width: 100px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancel-button:hover {
+  background-color: #ececec;
+}
+.ok-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.5);
+  width: 100px;
+  background-color: #ececec;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
